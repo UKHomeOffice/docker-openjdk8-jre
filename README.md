@@ -1,5 +1,7 @@
 # Docker Java JRE Container
 
+[![Build Status](https://travis-ci.org/UKHomeOffice/docker-openjdk8-jre.svg?branch=master)](https://travis-ci.org/UKHomeOffice/docker-openjdk8-jre)
+
 Docker container that also includes Open Java 8 *JRE* install for running production applications.
 
 ## Getting Started
