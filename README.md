@@ -20,6 +20,7 @@ In order to run this container you'll need docker installed.
 
 Normally, this would be used as a base image for a Java application.
 The example Dockerfile below will add custom artefacts and an entrypoint to run them.
+There is an onbuild trigger which will calls the downstream (child) docker images to upgrade the java-openjdk on each iteration
 
 ```
 # Use this repo

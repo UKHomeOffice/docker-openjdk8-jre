@@ -3,6 +3,11 @@
 
 FROM quay.io/ukhomeofficedigital/docker-centos-base:master
 
+# Add ONBUILD trigger so we keep the java-1.8.0 updated
+# on subsequent downstream (child) images
+ONBUILD RUN yum install -y java-1.8.0-openjdk && \
+            yum clean all
+
 # Install Open Java 8 (JRE ONly)
 # ==============================
 
