@@ -24,7 +24,7 @@ There is an onbuild trigger which will calls the downstream (child) docker image
 
 ```
 # Use this repo
-FROM quay.io/ukhomeofficedigital/openjdk8-jre:v0.1.0
+FROM quay.io/ukhomeofficedigital/openjdk8-jre:v0.2.0
 
 # Add application artefacts
 ENV app_deploy_path=/var/lib/myapp
