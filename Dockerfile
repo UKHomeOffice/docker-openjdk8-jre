@@ -7,7 +7,7 @@ FROM quay.io/ukhomeofficedigital/docker-centos-base:master
 ENV HOME /root
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
-ENV YUM_CMD="yum install -y java-1.8.0-openjdk && yum clean all"
+ENV YUM_CMD="yum install -y java-1.8.0-openjdk unzip && yum clean all"
 
 # Add ONBUILD trigger so we keep the java-1.8.0 updated
 # on subsequent downstream (child) images
