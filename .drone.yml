@@ -4,7 +4,7 @@ pipeline:
     environment:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     commands:
-      - docker build -t openjdk-jre:$${DRONE_COMMIT_SHA} .
+      - docker build -t openjdk8-rje:$${DRONE_COMMIT_SHA} .
     when:
       event: [push, tag]
 
@@ -16,10 +16,10 @@ pipeline:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     commands:
       - docker login -u="ukhomeofficedigital+drone" -p=$${DOCKER_PASSWORD} quay.io
-      - docker tag openjdk-jre:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/openjdk-jre:$${DRONE_COMMIT_SHA}
-      - docker tag openjdk-jre:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/openjdk-jre:latest
-      - docker push quay.io/ukhomeofficedigital/openjdk-jre:$${DRONE_COMMIT_SHA}
-      - docker push quay.io/ukhomeofficedigital/openjdk-jre:latest
+      - docker tag openjdk8-rje:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/openjdk8-rje:$${DRONE_COMMIT_SHA}
+      - docker tag openjdk8-rje:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/openjdk8-rje:latest
+      - docker push quay.io/ukhomeofficedigital/openjdk8-rje:$${DRONE_COMMIT_SHA}
+      - docker push quay.io/ukhomeofficedigital/openjdk8-rje:latest
     when:
       event: push
       branch: master
@@ -32,7 +32,7 @@ pipeline:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     commands:
       - docker login -u="ukhomeofficedigital+drone" -p=$${DOCKER_PASSWORD} quay.io
-      - docker tag openjdk-jre:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/openjdk-jre:$${DRONE_TAG}
-      - docker push quay.io/ukhomeofficedigital/openjdk-jre:$${DRONE_TAG}
+      - docker tag openjdk8-rje:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/openjdk8-rje:$${DRONE_TAG}
+      - docker push quay.io/ukhomeofficedigital/openjdk8-rje:$${DRONE_TAG}
     when:
       event: tag
