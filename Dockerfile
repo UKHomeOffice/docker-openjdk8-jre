@@ -28,8 +28,7 @@ RUN eval "${YUM_CMD} || ${YUM_CMD}"
 ENV JAVA_HOME /usr/lib/jvm/jre-openjdk
 
 RUN groupadd -g 1000 -r java && \
-    useradd -r -g java -u 1000 java && \
-    chown -R java:java /app
+    useradd -r -g java -u 1000 java 
 
 USER java
 
