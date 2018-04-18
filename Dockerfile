@@ -1,7 +1,7 @@
 # Security patches etc. managed centrally
 # =======================================
 
-FROM quay.io/ukhomeofficedigital/docker-centos-base:master
+FROM quay.io/ukhomeofficedigital/centos-base:latest
 
 # Set correct environment variables.
 ENV HOME /root
